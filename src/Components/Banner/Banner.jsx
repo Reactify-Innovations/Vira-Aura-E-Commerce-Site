@@ -14,36 +14,29 @@ function Banner() {
     useEffect(() => {
         const video = videoRef.current;
 
-        const handleVideoEnd = () => {
-            video.play();
+        const handleCanPlay = () => {
+            video.play().catch((error) => console.log("Playback error:", error));
         };
 
         if (video) {
-            video.play().catch(error => console.log("Playback error:", error)); // Catch autoplay errors
-            video.addEventListener("ended", handleVideoEnd);
+            video.src = mediaFiles[currentIndex].src;
+            video.load(); // Load new video only when src changes
+            video.addEventListener("canplaythrough", handleCanPlay);
         }
 
         return () => {
             if (video) {
-                video.removeEventListener("ended", handleVideoEnd);
+                video.removeEventListener("canplaythrough", handleCanPlay);
             }
         };
-    }, []);
-
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.src = mediaFiles[currentIndex].src;
-            videoRef.current.load(); // Reload the video source
-            videoRef.current.play().catch(error => console.log("Playback error:", error));
-        }
     }, [currentIndex]);
 
     const prevSlide = () => {
-        setCurrentIndex(prevIndex => (prevIndex === 0 ? mediaFiles.length - 1 : prevIndex - 1));
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? mediaFiles.length - 1 : prevIndex - 1));
     };
 
     const nextSlide = () => {
-        setCurrentIndex(prevIndex => (prevIndex === mediaFiles.length - 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === mediaFiles.length - 1 ? 0 : prevIndex + 1));
     };
 
     useEffect(() => {
