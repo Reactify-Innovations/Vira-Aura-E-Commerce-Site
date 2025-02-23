@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #E0F9D7;
+    --font-color: #FFF;
+    --secondary-color: #0A1A04;
+}
+
+
+.cart-container {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.cart-container .cart-inner-box {
+    height: 100%;
+    width: 95%;
+
+    margin: 45px auto;
+    padding: 25px;
+}
+
+.cart-container .cart-inner-box h2 {
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 45px;
+
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+    border: 2px solid var(--secondary-color);
+
+
+}
+
+.cart-container .cart-inner-box .cartItems {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 25px;
+    border: 2px solid var(--secondary-color);
+}
+
+
+
+.cartItems .items {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    border: 2px solid var(--secondary-color);
+    padding: 10px 15px;
+    margin: 15px 0;
+
+}
+
+
+
+.cartItems .items .details {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    position: relative;
+}
+
+.cartItems .items img {
+    height: 220px;
+    width: auto;
+    margin-right: 35px;
+}
+
+.cartItems .items h3 {
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+}
+
+.cartItems .emptyCart {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.cartItems .items p {
+    color: var(--secondary-color);
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    margin: 15px 0;
+}
+
+.cartItems .items span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.cartItems .items .del-btn {
+    padding: 5px 35px;
+    font-size: 1.2rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    transform: background 0.3s ease-in-out;
+}
+
+.cartItems .items .del-btn:hover {
+    background: hsl(104, 74%, 88%);
+}
+
+.cartItems .items .del-btn:active {
+    background: hsl(104, 74%, 90%);
+}
+
+.cartItems .items .btn {
+    padding: 0 8px;
+    margin: 0 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    
+    border: 1px solid var(--secondary-color); 
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.cartItems .items .btn:active {
+    background-color: hsl(104, 74%, 81%);
+}
+
+.box {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--secondary-color);
+
+    margin: 20px auto;
+}
+
+.box p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.box .checkout {
+    height: 50px;
+    width: 160px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border: none; outline: none;
+
+    color: var(--font-color);
+    background: var(--secondary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.box .checkout:hover {
+    background-color: hsl(104, 73%, 10%);
+}

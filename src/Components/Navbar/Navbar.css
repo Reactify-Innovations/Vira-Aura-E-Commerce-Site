@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Great+Vibes&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: #E0F9D7;
+    --font-color: #FFF;
+    --secondary-color: #0A1A04;
+}
+
+* {
+    .container a{
+        text-decoration: none;
+        color: var(--font-color);
+        padding: 5px 10px;
+    }
+}
+
+.container .navbar .links-logo .nav-logo a h1 {
+    font-family: 'Charm'!important;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.container .navbar .links-logo .nav-logo a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    height: 100;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 35px;
+}
+
+.container .navbar {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.container .navbar .links-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+}
+
+.container .navbar .links-logo .nav-links .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.container .navbar .links-logo .nav-links .links a {
+    font-size: 1.1rem;
+    border-radius: 20px;
+    font-style: italic;
+    transition: all 0.35s;
+}
+
+.container .navbar .links-logo .nav-links .links a:hover {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+.container .navbar .links-logo .harmBurger .menu-btn {
+    display: none;
+    padding: 5px 15px;
+    font-size: 2rem;
+    color: var(--bg-color);
+    background-color: hsl(104, 73%, 12%, 0.75);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.container .navbar .links-logo .harmBurger .menu-btn:active {
+    background-color: hsl(104, 73%, 10%);
+}
+
+
+.container .navbar .search-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.container .navbar .search-cart .search-bar #searchTerm {
+    width: 1025px;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: hsla(0, 0%, 100%, 0.85);
+
+    padding: 10px 20px;
+    border: none; outline: none;
+}
+
+.container .navbar .search-cart .search-bar #searchTerm::placeholder {
+    color:hsla(104, 73%, 6%, 0.7);
+}
+
+.container .navbar .search-cart .search-bar #searchTerm:focus {
+    background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container .navbar .search-cart .search-btn {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    background-color: transparent;
+
+    padding: 7px 10px;
+    position: absolute;
+    right: 17.5%;
+    z-index: 1;
+
+    border: none; outline: none;
+    cursor: pointer;
+}
+
+.container .navbar .search-cart .cart .cart-btn {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    background-color: hsla(0, 0%, 100%, 0.85);
+    
+    padding: 6px 77px;
+    border-radius: 5px;
+    border: none; outline: none;
+    cursor: pointer;
+}
+
+.container .navbar .search-cart .cart .cart-btn:active {
+    background-color: hsla(0, 0%, 100%, 0.9);
+}
+
+.container .navbar .search-cart .cart .counter {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    position: absolute;
+    top: 10%;
+    right: 7%;
+}
+
+
+
+
+
+.side-menu .nav-links .links li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+
+
+.side-menu .nav-links .links a {
+    font-size: 1.1rem;
+    border-radius: 20px;
+    font-style: italic;
+    transition: all 0.35s;
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.side-menu .nav-links .links a:hover {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+
+
+.side-menu .close {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    margin-bottom: 40px;
+}
+
+
+.side-menu .close .close-btn{
+    display: block;
+    padding: 5px 15px;
+    font-size: 2rem;
+    color: var(--bg-color);
+    background-color: hsl(104, 73%, 12%, 0.75);
+
+    border-radius: 5px;
+    border: none; outline: none;
+    cursor: pointer;
+
+}
+
+.side-menu .close .close-btn:active {
+    background-color: hsl(104, 73%, 10%);
+}
+
+
+.side-menu {
+    height: 100vh;
+    width: 40%;
+    background-color: hsl(104, 73%, 8%);
+    border-right: 3px solid hsla(0, 0%, 100%, 0.548);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 25px 45px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.side-menu.active {
+    transform: translateX(0);
+}
+
+.overlay {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+

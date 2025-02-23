@@ -1,0 +1,93 @@
+.product-details-container {
+    :root {
+        --bg-color: #E0F9D7;
+        --font-color: #FFF;
+        --secondary-color: #0A1A04;
+    }
+}
+
+.text {
+    text-align: center;
+    margin-top: 75px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.product-details-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 10px 15px ;
+    
+}
+
+.product-details-container .details-card {
+    height: 100%;
+    width: 95%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid;
+}
+
+.product-details-container .details-card .product-image img{
+    width: 500px;
+    height: auto;
+
+    border: 2px solid var(--secondary-color);
+    margin-right: 70px;
+}
+
+.product-details-container .details-card .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details-container .details-card .details h2 {
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.product-details-container .details-card .details span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-details-container .details-card .details p {
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.product-details-container .details-card .details .addCart {
+    width: 30%;
+    height: 40px;
+    font-size: 1.1rem;
+    margin: 15px 0;
+
+    border: none; outline: none;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out ;
+}
+
+.product-details-container .details-card .details .addCart:hover {
+    background: hsla(104, 73%, 6%, 0.9);
+}
+
+.product-details-container .details-card .details .addCart:active {
+    background: hsl(104, 73%, 9%);
+}
+
