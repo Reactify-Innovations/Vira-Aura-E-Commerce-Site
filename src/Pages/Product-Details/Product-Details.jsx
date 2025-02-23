@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/CartContext";
 import "./Product-Details.css";
 
 import Navbar from "../../Components/Navbar/Navbar";
-import Reviews from "../../Components/reviews/reviews";
+import Reviews from "../../Components/Reviews/Reviews";
 import Footer from "../../Components/Footer/Footer";
 
 function ProductDetails() {
