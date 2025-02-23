@@ -1,5 +1,4 @@
-import React, {useState, useContext}  from "react";
-import { CartContext } from "../../Context/CartContext";
+import React, {useState}  from "react";
 import './Checkout.css';
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
@@ -7,7 +6,6 @@ import Footer from "../../Components/Footer/Footer";
     
 
 function Checkout() {
-    const [cartItems] = useContext(CartContext);
     const [selectedPayment, setSelectedPayment] = useState(""); 
     const handlePaymentChange = (event) => {
         setSelectedPayment(event.target.value); 
@@ -23,7 +21,6 @@ function Checkout() {
             <div className="inner-box">
                 <h2>Checkout</h2>
                 <form className="checkout-form">
-                    <span>Total Price: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</span>
                     <label htmlFor="nameField">Name * :</label>
                     <input  type="text" 
                             placeholder="Your Name"
